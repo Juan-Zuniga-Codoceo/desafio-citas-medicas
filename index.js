@@ -46,7 +46,7 @@ app.get("/usuarios", async (req, res) => {
     html += "<ul>";
     _.forEach(usuarios, (usuariosPorGenero, genero) => {
       _.forEach(usuariosPorGenero, (usuario) => {
-        html += `<li>${genero} ${usuario.nombre} ${usuario.apellido} ${usuario.id} ${usuario.timestamp}</li>`;
+        html += `<li>Genero: ${genero} - Nombre: ${usuario.nombre} - Apellido: ${usuario.apellido} - ID: ${usuario.id} - TimeStap ${usuario.timestamp}</li>`;
       });
     });
     html += "</ul>";
