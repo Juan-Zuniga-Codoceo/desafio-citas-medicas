@@ -4,7 +4,7 @@ import _ from "lodash";
 import chalk from "chalk";
 import { v4 as uuidv4 } from "uuid";
 import moment from "moment";
-
+moment.locale('es')
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -28,7 +28,7 @@ app.get("/usuarios", async (req, res) => {
       genero: usuario.gender,
       nombre: usuario.name.first,
       apellido: usuario.name.last,
-      timestamp: moment().format(), 
+      timestamp: moment().format("MMMM Do YYYY, hh:mm a"), 
     };
 
     
